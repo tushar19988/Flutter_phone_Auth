@@ -62,7 +62,8 @@ class _LoginScreenState extends State<LoginScreen> {
               child: ElevatedButton(
                 onPressed: () async {
                   await FirebaseAuth.instance.verifyPhoneNumber(
-                    phoneNumber: '+91 8200110672',
+                    phoneNumber: country +phone,
+                    // phoneNumber: '+91 8200110672',
                     verificationCompleted: (PhoneAuthCredential credential) {
                       print("phonecred $credential");
                     },
